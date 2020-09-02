@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,15 +10,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="../static/bootstrap/css/flatly.min.css" />
-		<link rel="stylesheet" href="../static/bootstrap/css/styles.css" />
-
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<link rel="stylesheet" href="{% static 'bootstrap/css/flatly.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'bootstrap/css/styles.css' %}" />
 	</head>
 	<body>
 
@@ -73,9 +67,9 @@
 			</footer>
 		</div>
 
-		<!-- jQuery -->
+		<!-- jQuery
 		<script src="../static/bootstrap/js/jquery.min.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+		Bootstrap JavaScript
+		<script src="../static/bootstrap/js/bootstrap.min.js"></script> -->
 	</body>
 </html>
