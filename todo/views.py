@@ -15,6 +15,7 @@ def index(request):
 
     return render(request, 'index.html', context)
 
+@login_required
 @require_POST
 def addTodo(request):
     form = TodoForm(request.POST)
@@ -25,6 +26,7 @@ def addTodo(request):
 
     return redirect('index')
 
+@login_required
 def completeTodo(request, todo_id):
     todo = Todo.objects.get(pk=todo_id)
     todo.complete = True
@@ -32,11 +34,13 @@ def completeTodo(request, todo_id):
 
     return redirect('index')
 
+@login_required
 def deleteCompleted(request):
     Todo.objects.filter(complete__exact=True).delete()
 
     return redirect('index')
 
+@login_required
 def deleteAll(request):
     Todo.objects.all().delete()
 
